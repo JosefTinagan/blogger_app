@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
  get 'login' => 'author_sessions#new'
  get 'logout' => 'author_sessions#destroy'
+
+ resources :popular_articles, only: [:index]
 end

@@ -17,10 +17,12 @@
      	<% if logged_in? %>
    	  		<p><%= link_to "Articles", articles_path %></p> <br />
    	  		<p><%= link_to "Tags", tags_path %></p> <br />
+          <p><%= link_to "Most Viewed", popular_articles_path %></p><br />
    	  		<p><%= link_to "Profile", authors_path %></p>
     	<% else %>
      		<p><%= link_to "Articles", articles_path %></p> <br /> 
-   	  		<p><%= link_to "Tags", tags_path %></p>
+   	  	<p><%= link_to "Tags", tags_path %></p> <br />
+        <p><%= link_to "Most Viewed", popular_articles_path %></p>
      	<% end %>
       </div>
     <div id="container">

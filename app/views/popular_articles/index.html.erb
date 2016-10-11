@@ -1,0 +1,17 @@
+<h1>Three Most Popular Articles</h1>
+<ul id="articles">
+<% if @popular_article.count < 3 %>
+	<p>Not Enough Articles</p>
+
+<% else %>
+<ul id="populararticles">
+	
+	<li><%= link_to @popular_article.first.title, article_path(@popular_article.first) %></li>
+	<li><%= link_to @popular_article.second.title, article_path(@popular_article.second) %></li>
+	<li><%= link_to @popular_article.third.title, article_path(@popular_article.third) %></li>
+</ul>
+<% end %>
+</ul>
+<br />
+
+<%= link_to "Back", articles_path %>
