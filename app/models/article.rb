@@ -19,4 +19,14 @@ class Article < ApplicationRecord
 	def to_s
 		name
 	end
+
+	def self.view_increment(num)
+		if(num == nil)
+			return 1
+		else
+			num = num + 1
+			return num
+		end
+
+	end
 end

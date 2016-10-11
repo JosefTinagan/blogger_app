@@ -1,4 +1,4 @@
-$primary_color: #AAA;
+$primary_color: #333;
 
 body {
   background-color: $primary_color;
@@ -21,8 +21,10 @@ a {
   overflow: hidden;
 }
 
+
+
 #container {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   background: #fff;
   padding: 20px 40px;
@@ -30,7 +32,31 @@ a {
   margin-top: 20px;
 }
 
+#navigation_links{
+  width : 50px;
+  background: #DDD;
+  margin-left : -90px;
+  font-family: arial;
+
+}
+
+#navigation_links p{
+  margin-top: -10px;
+}
+
 #content {
   clear: both;
   padding-top: 20px;
+}
+
+#popular_articles{
+  background: #ccc;
+  margin-top : -180px;
+  margin-left : 70%;
+  width : 200px;
+  position : absolute;
+}
+
+#popular_articles p{
+  align-text : center;
 }

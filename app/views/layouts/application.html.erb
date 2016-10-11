@@ -9,12 +9,26 @@
   </head>
 
   <body>
+
   	<p class="flash">
     <%= flash.notice %>
     </p>
+    <div id="navigation_links">
+     	<% if logged_in? %>
+   	  		<p><%= link_to "Articles", articles_path %></p> <br />
+   	  		<p><%= link_to "Tags", tags_path %></p> <br />
+   	  		<p><%= link_to "Profile", authors_path %></p>
+    	<% else %>
+     		<p><%= link_to "Articles", articles_path %></p> <br /> 
+   	  		<p><%= link_to "Tags", tags_path %></p>
+     	<% end %>
+      </div>
     <div id="container">
+   	  
       <div id="content">
+
          <%= yield %>
+
          <hr>
          <h6>
            <% if logged_in? %>

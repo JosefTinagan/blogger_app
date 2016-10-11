@@ -5,11 +5,17 @@ class ArticlesController < ApplicationController
 
 	def index
 		@articles = Article.all
+		@popular_article = Article.order(view_count: :desc)
 	end
 
 	def show
 		@article = Article.find(params[:id])
 		
+		@article.view_count = Article.view_increment(@article.view_count)
+		@article.save
+
+
+
 		@comment = Comment.new
 		@comment.article_id = @article_id
 	end
@@ -49,4 +55,6 @@ class ArticlesController < ApplicationController
 		redirect_to articles_path
 	end
 
+
+	
 end
