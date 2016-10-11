@@ -1,10 +1,6 @@
 <h1>All Articles</h1>
-<ul id="popular_articles">
-	<p><center>Popular Articles</center></p>
-	<li><%= link_to @popular_article.first.title, article_path(@popular_article.first) %></li>
-	<li><%= link_to @popular_article.second.title, article_path(@popular_article.second) %></li>
-	<li><%= link_to @popular_article.third.title, article_path(@popular_article.third) %></li>
-</ul>
+
+
 
 <ul id="articles">
 	<% @articles.each do |article| %>
