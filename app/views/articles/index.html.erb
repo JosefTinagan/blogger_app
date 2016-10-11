@@ -1,6 +1,16 @@
 <h1>All Articles</h1>
 
+<% if @popular_article.count < 3 %>
 
+
+<% else %>
+<ul id="popular_articles">
+	<p><center>Popular Articles</center></p>
+	<li><%= link_to @popular_article.first.title, article_path(@popular_article.first) %></li>
+	<li><%= link_to @popular_article.second.title, article_path(@popular_article.second) %></li>
+	<li><%= link_to @popular_article.third.title, article_path(@popular_article.third) %></li>
+</ul>
+<% end %>
 
 <ul id="articles">
 	<% @articles.each do |article| %>
